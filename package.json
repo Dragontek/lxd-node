@@ -1,0 +1,35 @@
+{
+  "name": "lxd-node",
+  "version": "1.0.0",
+  "description": "An HTTP client library for node.js",
+  "contributors": [
+    {
+      "name": "Joshua Mondragon",
+      "email": "joshua.mondragon@dragontek.com"
+    }
+  ],
+  "homepage": "https://github.com/danwrong/restler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danwrong/restler.git"
+  },
+  "directories": {
+    "lib": "./classes"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "http-proxy": "^1.16.2",
+    "restler": "git+https://github.com/dragontek/restler.git"
+  },
+  "devDependencies": {
+    "nodeunit": "0.8.2"
+  },
+  "license": "MIT"
+}
