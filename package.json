@@ -1,7 +1,7 @@
 {
   "name": "lxd-node",
   "version": "1.0.0",
-  "description": "An HTTP client library for node.js",
+  "description": "An LXD client library for node.js",
   "contributors": [
     {
       "name": "Joshua Mondragon",
