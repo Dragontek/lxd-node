@@ -8,10 +8,10 @@
       "email": "joshua.mondragon@dragontek.com"
     }
   ],
-  "homepage": "https://github.com/danwrong/restler",
+  "homepage": "https://github.com/dragontek/lxd-node",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danwrong/restler.git"
+    "url": "https://github.com/dragontek/lxd-node.git"
   },
   "directories": {
     "lib": "./classes"
