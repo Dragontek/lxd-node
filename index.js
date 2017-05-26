@@ -9,12 +9,13 @@ var server = new ContainerServer('https://tiamat.dragontek.com:8443', cert, key)
 var images = new ImageServer('https://us.images.linuxcontainers.org')
 
 var container = {
-    "name": "my-new-container",
+    "name": "my-other-container",
     "architecture": "x86_64",
     "profiles": ["default"],
     "source": {"type": "image", "alias": "debian/latest"}
 }
-server.CreateContainer(container).then(function(result) {
+var container = "my-other-container";
+server.DeleteContainer(container).then(function(result) {
     console.log(result);
 }, function(error) {
     console.error(error);
