@@ -1,6 +1,6 @@
 import { StatusCode } from './status_code'
 
-export interface Operation {
+export type Operation = {
     ID: string
     Class: string
     CreatedAt: Date

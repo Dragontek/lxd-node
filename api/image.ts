@@ -1,4 +1,6 @@
-export interface ImagesPost extends ImagePut {
+export type ImagesPost = {
+    ImagePut
+
     Filename: string
     Source: ImagesPostSource
 
@@ -7,7 +9,9 @@ export interface ImagesPost extends ImagePut {
     Aliases: ImageAlias[]
 }
 
-export interface ImagesPostSource extends ImageSource {
+export type ImagesPostSource = {
+    ImageSource
+
     Mode: string
     Type: string
 
@@ -19,13 +23,15 @@ export interface ImagesPostSource extends ImageSource {
     Secret: string
 }
 
-export interface ImagePut {
+export type ImagePut = {
     AutoUpdate: boolean
     Properties: Map<string, string>
     Public: boolean
 }
 
-export interface Image extends ImagePut {
+export type Image = {
+    ImagePut
+
     Aliases: ImageAlias[]
     Architecture: string
     Cached: boolean
@@ -40,37 +46,36 @@ export interface Image extends ImagePut {
     UploadedAt: Date
 }
 
-/*
 function Writeable(img: Image):ImagePut {
     return img.ImagePut
 }
-*/
 
-export interface ImageAlias {
+export type ImageAlias = {
     Name: string
     Description: string
 }
 
-export interface ImageSource {
+export type ImageSource = {
     Alias: string
     Certificate: string
     Protocol: string
     Server: string
 }
 
-export interface ImageAliasesPost extends ImageAliasesEntry {
-    ImageAliasEntry
+export type ImageAliasesPost = {
+    ImageAliasesEntry
 }
 
-export interface ImageAliasesEntryPost {
+export type ImageAliasesEntryPost = {
     Name: string
 }
 
-export interface ImageAliasesPut {
+export type ImageAliasesPut = {
     Description: string
     Target: string
 }
 
-export interface ImageAliasesEntry extends ImageAliasesPut {
+export type ImageAliasesEntry = {
+    ImageAliasesPut
     Name: string
 }

@@ -1,11 +1,11 @@
-export interface ContainerStatePut {
+export type ContainerStatePut = {
     Action: string
     Timeout: number
     Force: boolean
     Stateful: boolean
 }
 
-export interface ContainerState {
+export type ContainerState = {
     Status: string
     Disk: Map<string, ContainerStateDisk>
     Memory: ContainerStateMemory
@@ -16,22 +16,22 @@ export interface ContainerState {
     CPU: ContainerStateCPU
 }
 
-export interface ContainerStateDisk {
+export type ContainerStateDisk = {
     Usage: number
 }
 
-export interface ContainerStateCPU {
+export type ContainerStateCPU = {
     Usage: number
 }
 
-export interface ContainerStateMemory {
+export type ContainerStateMemory = {
     Usage: number
     UsagePeak: number
     SwapUsage: number
     SwapUsagePeak: number
 }
 
-export interface ContainerStateNetwork {
+export type ContainerStateNetwork = {
     Addresses: ContainerStateNetworkAddress[]
     Counters: ContainerStateNetworkCounters
     Hwaddr: string
@@ -41,14 +41,14 @@ export interface ContainerStateNetwork {
     Type: string
 }
 
-export interface ContainerStateNetworkAddress {
+export type ContainerStateNetworkAddress = {
     Family: string
     Address: string
     Netmask: string
     Scop: string
 }
 
-export interface ContainerStateNetworkCounters {
+export type ContainerStateNetworkCounters = {
     BytesReceived: number
     BytesSent: number
     PacketsReceived: number

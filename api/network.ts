@@ -1,19 +1,22 @@
-export interface NetworksPost extends NetworkPut {
+export type NetworksPost = {
+    NetworkPut
     Managed: boolean
     Name: string
     Type: string
 }
 
-export interface NetworkPost {
+export type NetworkPost = {
     Name: string
 }
 
-export interface NetworkPut {
+export type NetworkPut = {
     Config: Map<string, string>
     Description: string
 }
 
-export interface Network extends NetworkPut {
+export type Network = {
+    NetworkPut
+
     Name: string
     Type: string
     UsedBy: string[]

@@ -1,11 +1,12 @@
 import { StatusCode } from './status_code'
 
-export interface ContainersPost extends ContainerPut {
+export type ContainersPost = {
+    ContainerPut
     Name: string
     Source: ContainerSource
 }
 
-export interface ContainerPost {
+export type ContainerPost = {
     // Used for renames
     Name: string
     // Used for migration
@@ -16,7 +17,7 @@ export interface ContainerPost {
     ContainerOnly: boolean
 }
 
-export interface ContainerPut {
+export type ContainerPut = {
     Description: string
     Architecture: string
     Config: Map<string, string>
@@ -27,7 +28,8 @@ export interface ContainerPut {
     Stateful: boolean
 }
 
-export interface Container extends ContainerPut {
+export type Container = {
+    ContainerPut
     CreatedAt: Date
     ExpandedConfig: Map<string, string>
     ExpandedDevices: Map<string, Map<string, string>>
@@ -36,11 +38,9 @@ export interface Container extends ContainerPut {
     StatusCode: StatusCode
 }
 
-/*
-function Writeable(c: Container):ContainerPut {
+export function Writeable(c: Container):ContainerPut {
     return c.ContainerPut
 }
-*/
 
 function IsActive(c: Container):boolean {
     switch (c.Status) {
@@ -53,7 +53,7 @@ function IsActive(c: Container):boolean {
     }
 }
 
-export interface ContainerSource {
+export type ContainerSource = {
     Type: string
     Certificate: string
 

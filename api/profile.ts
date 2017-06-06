@@ -1,18 +1,20 @@
-export interface ProfilesPost extends ProfilePut {
+export type ProfilesPost = {
+    ProfilePut
     Name: string
 }
 
-export interface ProfilePost {
+export type ProfilePost = {
     Name: string
 }
 
-export interface ProfilePut {
+export type ProfilePut = {
     Config: Map<string, string>
     Description: string
     Devices: Map<string, Map<string, string>>
 }
 
-export interface Profile extends ProfilePut {
+export type Profile = {
+    ProfilePut
     Name: string
     UsedBy: string[]
 }

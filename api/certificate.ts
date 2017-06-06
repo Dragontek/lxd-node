@@ -1,20 +1,21 @@
-export interface CertificatesPost extends CertificatePut {
+export type CertificatesPost = {
+    CertificatePut
     Certificate: string
     Password: string
 }
 
-export interface CertificatePut {
+export type CertificatePut = {
     Name: string
     Type: string
 }
 
-export interface Certificate extends CertificatePut {
+export type Certificate = {
+    CertificatePut
     Certificate: string
     FingerPrint: string
 }
 
-/*
-function Writeable(cert: Certificate):CertificatePut {
+export function Writeable(cert: Certificate):CertificatePut {
     return cert.CertificatePut
 }
-*/
+

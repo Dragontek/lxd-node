@@ -1,4 +1,4 @@
-export interface ServerEnvironment {
+export type ServerEnvironment = {
     Addresses: string[]
     Architectures: string[]
     Certificate: string
@@ -15,11 +15,11 @@ export interface ServerEnvironment {
     StorageVersion: string
 }
 
-export interface ServerPut {
+export type ServerPut = {
     Config: Map<string, any>
 }
 
-export interface ServerUntrusted {
+export type ServerUntrusted = {
     APIExtensions: string[]
     APIStatus: string
     APIVersion: string
@@ -27,6 +27,8 @@ export interface ServerUntrusted {
     Public: boolean
 }
 
-export interface Server extends ServerPut, ServerUntrusted {
+export type Server = {
+    ServerPut
+    ServerUntrusted
     Environment: ServerEnvironment
 }

@@ -1,31 +1,33 @@
-export interface StoragePoolsPost {
+export type StoragePoolsPost = {
     Name: string
     Driver: string
 }
 
-export interface StoragePool {
+export type StoragePool = {
     Name: string
     Driver: string
     UsedBy: string[]
 }
 
-export interface StoragePoolPut {
+export type StoragePoolPut = {
     Config: Map<string, string>
     Description: string
 }
 
-export interface StorageVolumesPostn extends StorageVolumePut {
+export type StorageVolumesPost = {
+    StorageVolumePut
     Name: string
     Type: string
 }
 
-export interface StorageVolume extends StorageVolumePut {
+export type StorageVolume = {
+    StorageVolumePut
     Name: string
     Type: string
     UsedBy: string[]
 }
 
-export interface StorageVolumePut {
+export type StorageVolumePut = {
     Config: Map<string, string>
     Description: string
 }

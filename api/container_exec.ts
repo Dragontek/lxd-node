@@ -1,10 +1,10 @@
-export interface ContainerExecControl {
+export type ContainerExecControl = {
     Command: string
     Args: Map<string, string>
     Signal: number
 }
 
-export interface ContainerExecPost {
+export type ContainerExecPost = {
     Command: string[]
     WaitForWS: boolean
     Interactive: boolean

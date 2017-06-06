@@ -1,14 +1,14 @@
-export interface ContainerSnapshotsPost {
+export type ContainerSnapshotsPost = {
     Name: string
     Stateful: boolean
 }
 
-export interface ContainerSnapshotPost {
+export type ContainerSnapshotPost = {
     Name: string
     Migration: boolean
 }
 
-export interface ContainerSnapshot {
+export type ContainerSnapshot = {
     Architecture: string
     Config: Map<string, string>
     CreationDate: Date
