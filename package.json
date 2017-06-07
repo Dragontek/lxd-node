@@ -26,9 +26,15 @@
   "dependencies": {
     "commander": "^2.9.0",
     "http-proxy": "^1.16.2",
-    "restler": "git+https://github.com/dragontek/restler.git"
+    "request": "^2.81.0",
+    "restler": "git+https://github.com/dragontek/restler.git",
+    "sprintf-js": "^1.1.1"
   },
   "devDependencies": {
+    "@types/node": "^7.0.27",
+    "@types/request": "0.0.43",
+    "@types/restler": "^3.1.5",
+    "@types/sprintf-js": "0.0.27",
     "nodeunit": "0.8.2"
   },
   "license": "MIT"
